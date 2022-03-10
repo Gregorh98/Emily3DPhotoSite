@@ -1,0 +1,68 @@
+<html>
+
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	div.gallery {
+	  border: 1px solid #ccc;
+	}
+	
+	div.gallery:hover {
+	  border: 1px solid #777;
+	}
+	
+	div.gallery img {
+	  width: 100%;
+	  height: auto;
+	}
+	
+	div.desc {
+	  padding: 15px;
+	  text-align: center;
+	}
+	
+	* {
+	  box-sizing: border-box;
+	}
+	
+	.responsive {
+	  padding: 0 6px;
+	  float: left;
+	  width: 24.99999%;
+	}
+	
+	@media only screen and (max-width: 700px) {
+	  .responsive {
+	    width: 49.99999%;
+	    margin: 6px 0;
+	  }
+	}
+	
+	@media only screen and (max-width: 500px) {
+	  .responsive {
+	    width: 100%;
+	  }
+	}
+	
+	.clearfix:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+</style>
+</head>
+
+<body>
+
+	<h3 class="display-3">3D Photos for Em</h3>
+	<p>Heyo! I wrote this wee website to let you see some 3D pictures of home in case you were ever missing us hehe. Apologies for the piss poor load time, this is running off a home made webserver hosted from a Raspberry Pi</br>
+	</br><strong> Click on photos to view them in 3D! Zoom in and scroll around for an up-close look! For best results turn up screen brightness</strong></p>
+
+	<div id="galleryView"></div>
+	<div class="clearfix"></div>
+
+<script src="getFileNames.php"></script>
+<script src="insertImageBlock.js"></script>
+</body>
+</html>
